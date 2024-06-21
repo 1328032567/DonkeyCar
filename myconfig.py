@@ -102,30 +102,30 @@ CAMERA_TYPE = "PICAM"   # (PICAM|WEBCAM|CVCAM|CSIC|V4L|D435|MOCK|IMAGE_LIST)
 # # Uses a PwmPin for steering (servo) and a second PwmPin for throttle (ESC)
 # # Base PWM Frequence is presumed to be 60hz; use PWM_xxxx_SCALE to adjust pulse with for non-standard PWM frequencies
 # #
-PWM_STEERING_THROTTLE = {
-     "PWM_STEERING_PIN": "PCA9685.1:40.1",   # PWM output pin for steering servo
-     "PWM_STEERING_SCALE": 1.0,              # used to compensate for PWM frequency differents from 60hz; NOT for adjusting steering range
-     "PWM_STEERING_INVERTED": False,         # True if hardware requires an inverted PWM pulse
-     "PWM_THROTTLE_PIN": "PCA9685.1:40.0",   # PWM output pin for ESC
-     "PWM_THROTTLE_SCALE": 1.0,              # used to compensate for PWM frequence differences from 60hz; NOT for increasing/limiting speed
-     "PWM_THROTTLE_INVERTED": False,         # True if hardware requires an inverted PWM pulse
-     "STEERING_LEFT_PWM": 470,               #pwm value for full left steering
-     "STEERING_RIGHT_PWM": 340,              #pwm value for full right steering
-     "THROTTLE_FORWARD_PWM": 400,            #pwm value for max forward throttle
-     "THROTTLE_STOPPED_PWM": 370,            #pwm value for no movement
-     "THROTTLE_REVERSE_PWM": 350,            #pwm value for max reverse throttle
-}
+##PWM_STEERING_THROTTLE = {
+ ##    "PWM_STEERING_PIN": "PCA9685.1:40.1",   # PWM output pin for steering servo
+ ##    "PWM_STEERING_SCALE": 1.0,              # used to compensate for PWM frequency differents from 60hz; NOT for adjusting steering range
+##   "PWM_STEERING_INVERTED": False,         # True if hardware requires an inverted PWM pulse
+  ##   "PWM_THROTTLE_PIN": "PCA9685.1:40.0",   # PWM output pin for ESC
+    ## "PWM_THROTTLE_SCALE": 1.0,              # used to compensate for PWM frequence differences from 60hz; NOT for increasing/limiting speed
+   #  "PWM_THROTTLE_INVERTED": False,         # True if hardware requires an inverted PWM pulse
+   #  "STEERING_LEFT_PWM": 450,               #pwm value for full left steering
+   #  "STEERING_RIGHT_PWM": 340,              #pwm value for full right steering
+   #  "THROTTLE_FORWARD_PWM": 420,            #pwm value for max forward throttle
+   #  "THROTTLE_STOPPED_PWM": 370,            #pwm value for no movement
+   #  "THROTTLE_REVERSE_PWM": 350,            #pwm value for max reverse throttle
+##}
 
 # #
 # # I2C_SERVO (deprecated in favor of PWM_STEERING_THROTTLE)
 # #
-STEERING_CHANNEL = 1            #(deprecated) channel on the 9685 pwm board 0-15
-STEERING_LEFT_PWM = 470         #pwm value for full left steering
-STEERING_RIGHT_PWM = 340        #pwm value for full right steering
-THROTTLE_CHANNEL = 0            #(deprecated) channel on the 9685 pwm board 0-15
-THROTTLE_FORWARD_PWM = 400      #pwm value for max forward throttle
-THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
-THROTTLE_REVERSE_PWM = 350      #pwm value for max reverse throttle
+#STEERING_CHANNEL = 1            #(deprecated) channel on the 9685 pwm board 0-15
+#STEERING_LEFT_PWM = 450         #pwm value for full left steering
+#STEERING_RIGHT_PWM = 340        #pwm value for full right steering
+#THROTTLE_CHANNEL = 0            #(deprecated) channel on the 9685 pwm board 0-15
+#THROTTLE_FORWARD_PWM = 420      #pwm value for max forward throttle
+#THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
+#THROTTLE_REVERSE_PWM = 350      #pwm value for max reverse throttle
 # 
 # #
 # # PIGPIO_PWM (deprecated in favor of PWM_STEERING_THROTTLE)
@@ -137,6 +137,35 @@ THROTTLE_REVERSE_PWM = 350      #pwm value for max reverse throttle
 # THROTTLE_PWM_FREQ = 50          #Frequency for PWM
 # THROTTLE_PWM_INVERTED = False   #If PWM needs to be inverted
 # 
+
+
+PWM_STEERING_THROTTLE = {
+    "PWM_STEERING_PIN": "PCA9685.1:40.1",   # PWM output pin for steering servo
+    "PWM_STEERING_SCALE": 1.0,              # used to compensate for PWM frequency differents from 60hz; NOT for adjusting steering range
+    "PWM_STEERING_INVERTED": False,         # True if hardware requires an inverted PWM pulse
+    "PWM_THROTTLE_PIN": "PCA9685.1:40.0",   # PWM output pin for ESC
+    "PWM_THROTTLE_SCALE": 1.0,              # used to compensate for PWM frequence differences from 60hz; NOT for increasing/limiting speed
+    "PWM_THROTTLE_INVERTED": False,         # True if hardware requires an inverted PWM pulse
+    "STEERING_LEFT_PWM": 460,               #pwm value for full left steering
+    "STEERING_RIGHT_PWM": 296,              #pwm value for full right steering
+    "THROTTLE_FORWARD_PWM": 500,            #pwm value for max forward throttle
+    "THROTTLE_STOPPED_PWM": 370,            #pwm value for no movement
+    "THROTTLE_REVERSE_PWM": 220,            #pwm value for max reverse throttle
+}
+
+#
+# I2C_SERVO (deprecated in favor of PWM_STEERING_THROTTLE)
+#
+STEERING_CHANNEL = 1            #(deprecated) channel on the 9685 pwm board 0-15
+STEERING_LEFT_PWM = 460         #pwm value for full left steering
+STEERING_RIGHT_PWM = 296       #pwm value for full right steering
+THROTTLE_CHANNEL = 0            #(deprecated) channel on the 9685 pwm board 0-15
+THROTTLE_FORWARD_PWM = 500      #pwm value for max forward throttle
+THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
+THROTTLE_REVERSE_PWM = 220      #pwm value for max reverse throttle
+
+
+
 # #
 # # SERVO_HBRIDGE_2PIN drivetrain configuration
 # # - configures a steering servo and an HBridge in 2pin mode (2 pwm pins)
