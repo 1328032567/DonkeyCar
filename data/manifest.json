@@ -1,0 +1,5 @@
+["cam/image_array", "steering", "throttle"]
+["image_array", "float", "float"]
+{}
+{"created_at": 1718198431.8602345, "sessions": {"all_full_ids": ["24-06-12_0", "24-06-12_1", "24-06-21_2", "24-06-21_3", "24-06-25_4"], "last_id": 4, "last_full_id": "24-06-25_4"}}
+{"paths": ["catalog_0.catalog"], "current_index": 886, "max_len": 1000, "deleted_indexes": []}
